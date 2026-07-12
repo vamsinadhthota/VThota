@@ -431,4 +431,35 @@ p,li{line-height:1.75;overflow-wrap:anywhere}
  *,*::before,*::after{animation:none!important;transition:none!important}
  html{scroll-behavior:auto}
 }
+
+/* Publication Search */
+
+.search-box{
+
+width:100%;
+
+padding:12px;
+
+margin:20px 0;
+
+font-size:16px;
+
+border:1px solid #ccc;
+
+border-radius:6px;
+
+box-sizing:border-box;
+
+}
+
+.search-box:focus{
+
+outline:none;
+
+border-color:#0056b3;
+
+box-shadow:0 0 5px rgba(0,86,179,.3);
+
+}
+
 </style>
