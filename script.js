@@ -149,3 +149,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/* ============================
+   Publication Search
+============================ */
+
+const searchBox = document.getElementById("publicationSearch");
+
+if(searchBox){
+
+searchBox.addEventListener("keyup", function(){
+
+const keyword = this.value.toLowerCase();
+
+const papers = document.querySelectorAll("#publicationList li");
+
+papers.forEach(paper=>{
+
+const text = paper.textContent.toLowerCase();
+
+paper.style.display =
+text.includes(keyword)
+? ""
+: "none";
+
+});
+
+});
+
+}
