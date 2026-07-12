@@ -2,6 +2,7 @@
 :root{
   --primary:#003366;
   --accent:#0056b3;
+  --background:#F8F9FA;
   --maroon:#800000;
   --border:#ddd;
   --text:#333;
@@ -22,6 +23,11 @@ body {
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
       clear: both;
+      position:sticky;
+      top:0;
+      background:white;
+      z-index:999;
+      padding:10px;
     }
 
     .tab {
@@ -48,9 +54,10 @@ body {
 
     .panel {
       display: none;
-      padding: 12px;
-      border: 1px solid #ddd;
-      margin-top: 0;
+      padding: 40px;
+      border: 2px solid #ddd;
+      margin-top: 20px;
+      margin-bottom:30px;
     }
 
     .panel.active {
@@ -330,6 +337,8 @@ body {
       height: auto;
       margin: 0 auto 25px auto;
       border: 5px solid #555;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,.25);      
     }
 
     .profile-bio p {
