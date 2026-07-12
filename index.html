@@ -12,7 +12,21 @@
 
 <body>
 
-  <div class="profile-bio">
+  <div class="tabbar" role="tablist" aria-label="Profile sections">
+    <button id="home-tab" class="tab active" data-tab="bio" type="button" role="tab" aria-selected="true" aria-controls="bio">Home</button>
+    <button id="academic-tab" class="tab active" data-tab="academic" type="button" role="tab" aria-selected="true" aria-controls="academic">Academic Experience</button>
+    <button id="expertise-tab" class="tab" data-tab="expertise" type="button" role="tab" aria-selected="false" aria-controls="expertise">Research Expertise and Interests</button>
+    <button id="publications-tab" class="tab" data-tab="publications" type="button" role="tab" aria-selected="false" aria-controls="publications">Research Contributions</button>
+    <button id="supervision-tab" class="tab" data-tab="supervision" type="button" role="tab" aria-selected="false" aria-controls="supervision">Research Supervision</button>
+    <button id="peer-tab" class="tab" data-tab="peer" type="button" role="tab" aria-selected="false" aria-controls="peer">Professional Service</button>
+    <button id="teaching-tab" class="tab" data-tab="teaching" type="button" role="tab" aria-selected="false" aria-controls="teaching">Teaching and Mentoring</button>
+    <button id="outreach-tab" class="tab" data-tab="outreach" type="button" role="tab" aria-selected="false" aria-controls="outreach">Academic Outreach</button>
+    <button id="contact-tab" class="tab" data-tab="contact" type="button" role="tab" aria-selected="false" aria-controls="contact">Office and Contact</button>
+  </div>
+
+
+   <div id="bio" class="panel active" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+     
     <img src="VamsinadhThota_Picture.jpg" class="profile-image" alt="Dr. Vamsinadh Thota">
 
     <p>
@@ -31,17 +45,11 @@
     </p>
   </div>
 
-  <div class="tabbar" role="tablist" aria-label="Profile sections">
-    <button id="academic-tab" class="tab active" data-tab="academic" type="button" role="tab" aria-selected="true" aria-controls="academic">Academic Experience</button>
-    <button id="expertise-tab" class="tab" data-tab="expertise" type="button" role="tab" aria-selected="false" aria-controls="expertise">Research Expertise and Interests</button>
-    <button id="publications-tab" class="tab" data-tab="publications" type="button" role="tab" aria-selected="false" aria-controls="publications">Research Contributions</button>
-    <button id="supervision-tab" class="tab" data-tab="supervision" type="button" role="tab" aria-selected="false" aria-controls="supervision">Research Supervision</button>
-    <button id="peer-tab" class="tab" data-tab="peer" type="button" role="tab" aria-selected="false" aria-controls="peer">Professional Service</button>
-    <button id="teaching-tab" class="tab" data-tab="teaching" type="button" role="tab" aria-selected="false" aria-controls="teaching">Teaching and Mentoring</button>
-    <button id="outreach-tab" class="tab" data-tab="outreach" type="button" role="tab" aria-selected="false" aria-controls="outreach">Academic Outreach</button>
-    <button id="contact-tab" class="tab" data-tab="contact" type="button" role="tab" aria-selected="false" aria-controls="contact">Office and Contact</button>
-  </div>
 
+
+
+
+  
   <div id="academic" class="panel active" role="tabpanel" aria-labelledby="academic-tab" tabindex="0">
     <dl>
       <dt><strong>Assistant Professor (Grade-I)</strong></dt>
