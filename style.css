@@ -1,0 +1,425 @@
+<style>
+:root{
+  --primary:#003366;
+  --accent:#0056b3;
+  --maroon:#800000;
+  --border:#ddd;
+  --text:#333;
+}
+
+body {
+      padding: 25px;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .tabbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      clear: both;
+    }
+
+    .tab {
+      background: #800000;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .tab.active {
+      background: #A52A2A;
+    }
+
+    .tab:focus,
+    .tab:focus-visible,
+    a:focus,
+    a:focus-visible {
+      outline: 3px solid #0056b3;
+      outline-offset: 2px;
+    }
+
+    .panel {
+      display: none;
+      padding: 12px;
+      border: 1px solid #ddd;
+      margin-top: 0;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    p, li, a, td, th {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    #academic dl {
+      margin: 0;
+    }
+
+    #academic dt {
+      margin-top: 14px;
+    }
+
+    #academic dd {
+      margin: 6px 0 0 0;
+      padding-left: 18px;
+    }
+
+    #publications ol {
+      padding-left: 25px;
+    }
+
+    #publications li {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    #publications strong {
+      color: #003366;
+      font-size: 1.05rem;
+    }
+
+    #publications em {
+      color: #555;
+    }
+
+    #publications a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    #publications a:hover {
+      text-decoration: underline;
+    }
+
+    #supervision h3 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 6px;
+    }
+
+    .supervision-list {
+      margin-left: 25px;
+      padding-left: 20px;
+    }
+
+    .supervision-list li {
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    .supervision-list h4 {
+      margin-bottom: 8px;
+      color: #003366;
+    }
+
+    .supervision-list p {
+      margin: 4px 0;
+    }
+
+    .journal-columns {
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .journal-columns li {
+      margin-bottom: 10px;
+    }
+
+    #contact {
+      padding: 20px 0;
+    }
+
+    #contact h2 {
+      color: #800000;
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #800000;
+      padding-bottom: 8px;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .contact-container h3 {
+      color: #800000;
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .contact-container p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .profile-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 8px 0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .profile-list li {
+      margin-bottom: 12px;
+    }
+
+    .profile-list a {
+      color: #0056b3;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .profile-list a:hover {
+      color: #800000;
+      text-decoration: underline;
+    }
+
+    .last-updated {
+      margin-top: 30px;
+      text-align: right;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    .activity-list {
+      margin-left: 25px;
+      padding-left: 20px;
+    }
+
+    .activity-list li {
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .activity-list h4 {
+      margin-bottom: 8px;
+      color: #003366;
+    }
+
+    .activity-list p {
+      margin: 4px 0;
+    }
+
+    .teaching-summary {
+      margin: 20px 0 30px;
+    }
+
+    .teaching-summary h3 {
+      color: #003366;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #0056b3;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .summary-table {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .summary-row {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px 15px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .summary-row .label {
+      width: 180px;
+      min-width: 180px;
+      font-weight: 600;
+      color: #003366;
+    }
+
+    .summary-row .value {
+      flex: 1;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .teaching-list {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+
+    .teaching-list > li {
+      margin-bottom: 28px;
+    }
+
+    .teaching-list h4 {
+      margin: 0 0 10px;
+      padding: 8px 12px;
+      background: #f4f7fb;
+      color: #003366;
+      border-left: 5px solid #0056b3;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .course-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .course-list li {
+      margin: 8px 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .course-list strong {
+      color: #0056b3;
+      font-weight: 700;
+    }
+
+    .course-list li:hover {
+      color: #000;
+      background: #fafafa;
+      border-radius: 4px;
+      transition: 0.2s ease;
+    }
+
+    .panel h3 {
+      color: #003366;
+      border-bottom: 2px solid #0056b3;
+      padding-bottom: 6px;
+      margin-top: 25px;
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    .profile-bio {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+
+    .profile-image {
+      display: block;
+      width: 200px;
+      height: auto;
+      margin: 0 auto 25px auto;
+      border: 5px solid #555;
+    }
+
+    .profile-bio p {
+      margin-bottom: 15px;
+    }
+
+    .profile-bio a {
+      color: #0047ab;
+      text-decoration: none;
+    }
+
+    .profile-bio a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .contact-container {
+        padding: 10px;
+      }
+
+      #contact h2 {
+        font-size: 22px;
+      }
+
+      .last-updated {
+        text-align: left;
+      }
+
+      .summary-row {
+        flex-direction: column;
+      }
+
+      .summary-row .label {
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 5px;
+      }
+
+      .teaching-list {
+        padding-left: 18px;
+      }
+
+      .teaching-list h4 {
+        font-size: 17px;
+      }
+
+      .course-list li {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .profile-image {
+        width: 180px;
+        height: auto;
+        margin: 0 auto 20px auto;
+      }
+    }
+
+/* ===== Mobile & Responsive Enhancements ===== */
+body{color:var(--text);background:#fff;}
+h1{font-size:clamp(2rem,5vw,2.8rem)}
+h2{font-size:clamp(1.6rem,4vw,2rem)}
+h3{font-size:clamp(1.3rem,3vw,1.6rem)}
+p,li{line-height:1.75;overflow-wrap:anywhere}
+.tabbar{overflow-y:hidden;-webkit-overflow-scrolling:touch;margin:20px 0;border-bottom:2px solid var(--border)}
+.tabbar::-webkit-scrollbar-thumb{background:#bbb;border-radius:10px}
+.tab{min-height:44px}
+.contact-container{width:100%;max-width:900px;box-sizing:border-box}
+#publications a{overflow-wrap:anywhere}
+.summary-row .label{flex:0 0 180px}
+.journal-columns{columns:2;column-gap:40px}
+@media(max-width:768px){
+ body{padding:15px;font-size:15px}
+ .journal-columns{columns:1}
+ .summary-row{flex-direction:column}
+ .summary-row .label{flex:none;margin-bottom:8px}
+ .contact-container,.panel{padding:15px}
+ .profile-image{width:170px}
+ .tab{padding:10px 14px;font-size:14px}
+ .last-updated{text-align:left}
+}
+@media(max-width:480px){
+ body{padding:12px}
+ .profile-image{width:140px}
+ .panel{padding:12px}
+ .tab{font-size:13px;padding:9px 12px}
+ .summary-row{padding:8px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ html{scroll-behavior:auto}
+}
+</style>
