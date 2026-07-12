@@ -333,7 +333,7 @@ body {
 
     .profile-image {
       display: block;
-      width: 200px;
+      width: 240px;
       height: auto;
       margin: 0 auto 25px auto;
       border: 5px solid #555;
@@ -361,11 +361,11 @@ body {
 }
 
 .bio-image {
-    flex: 0 0 180px;
+    flex: 0 0 240px;
 }
 
 .bio-image img {
-    width: 180px;
+    width: 240px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -388,7 +388,7 @@ body {
     }
 
     .bio-image img {
-        width: 180px;
+        width: 240px;
     }
 }
 
