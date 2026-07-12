@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else {
 
-        activateTab("academic");
+        activateTab("bio");
 
     }
 
