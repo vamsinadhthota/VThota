@@ -1,5 +1,4 @@
-<script>
-    // =============================
+// =============================
 // Tab Navigation Script
 // =============================
 
@@ -150,4 +149,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-</script>
