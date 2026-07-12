@@ -462,4 +462,43 @@ box-shadow:0 0 5px rgba(0,86,179,.3);
 
 }
 
+/* Back to Top */
+
+#topBtn{
+
+display:none;
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+padding:12px 16px;
+
+font-size:22px;
+
+border:none;
+
+border-radius:50%;
+
+background:#800000;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 3px 8px rgba(0,0,0,.3);
+
+z-index:1000;
+
+}
+
+#topBtn:hover{
+
+background:#0056b3;
+
+}
+
+
 </style>
