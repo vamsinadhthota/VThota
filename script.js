@@ -215,8 +215,17 @@ behavior:"smooth"
 
 const darkButton = document.getElementById("darkMode");
 
-darkButton.onclick=function(){
+// Restore previous preference
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
 
-document.body.classList.toggle("dark");
+darkButton.onclick = function () {
+    document.body.classList.toggle("dark");
 
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
 };
